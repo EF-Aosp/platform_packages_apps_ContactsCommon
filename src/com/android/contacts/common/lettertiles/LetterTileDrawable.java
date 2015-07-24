@@ -143,7 +143,7 @@ public class LetterTileDrawable extends Drawable {
         }
 
         // Draw letter/digit only if the first character is an english letter
-        if (mDisplayName != null && isEnglishLetter(mDisplayName.charAt(0))) {
+        if (!TextUtils.isEmpty(mDisplayName) && isEnglishLetter(mDisplayName.charAt(0))) {
             // Draw letter or digit.
             sFirstChar[0] = Character.toUpperCase(mDisplayName.charAt(0));
 
